@@ -7,6 +7,8 @@ import (
 	"strconv"
 )
 
+//small tasks from the Stepik Go course and other sources
+
 func main() {
 	var foo int
 
@@ -153,11 +155,36 @@ func main() {
 	fmt.Println(users) //["Bob", "Alice", "Kate", "Tom", "Paul", "Mike", "Robert"]
 
 	//12
+	fmt.Println("\n---------------- 12 --------------")
 	v := '1'
 	fmt.Println(strconv.ParseInt(string(v), 10, 10))
 	fmt.Println(strconv.Atoi(string(v)))
 
 	fmt.Println(reflect.TypeOf(v))
+
+	//13. reverse number
+	fmt.Println("\n---------------- 13 --------------")
+	var a22 string = "3755"
+
+	for i := len(a22) - 1; i >= 0; i-- {
+		fmt.Print(string(a22[i]))
+	}
+
+	//14. int to hours and secons
+	fmt.Println("\n---------------- 14 --------------")
+	var ksec int = 13257
+
+	fmt.Printf("It is %d hours %d minutes.\n", ksec/3600, ksec%3600/60)
+
+	//15
+	fmt.Println("\n---------------- 15 --------------")
+	var a15, b15, c15 float64 = 6, 8, 10
+
+	if math.Sqrt(a15*a15+b15*b15) == c15 {
+		fmt.Println("Прямоугольный")
+	} else {
+		fmt.Println("Непрямоугольный")
+	}
 }
 
 func isUnique(number int) bool {

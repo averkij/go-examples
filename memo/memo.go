@@ -8,17 +8,18 @@ import (
 
 //Memory trainer
 //
-//1. At first build the numbers to persons table according to the "Quantum memory power" book.
+//1. Build the numbers to persons table according to the "Quantum memory power" book.
 //2. Train this table.
 //3. Put the persons to your memory palace.
-//4. Recall the numbers from the palace.
+//4. Recall the persons from the palace and translate them to numbers.
 
 func main() {
-	intervalInSeconds := 4
-	amountOfNumbers := 20
+	intervalInSeconds := 3
+	amountOfNumbers := 50
 
 	seed := rand.NewSource(time.Now().UnixNano())
 	rnd := rand.New(seed)
+	fmt.Print("\n")
 
 	for i := 0; i < amountOfNumbers; i++ {
 		n := rnd.Int31n(100)
