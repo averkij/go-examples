@@ -185,6 +185,36 @@ func main() {
 	} else {
 		fmt.Println("Непрямоугольный")
 	}
+
+	fmt.Println("\n---------------- 16 --------------")
+	strToSum := 123123222
+
+	for strToSum > 9 {
+		strToSum = getSum(strToSum)
+	}
+
+	fmt.Println(getSum(strToSum))
+
+	//17
+	for i := 0; i < 100; i++ {
+		if i%10 == 1 && i != 11 {
+			fmt.Println(i, "korova")
+		} else if (i%10 == 2 || i%10 == 3 || i%10 == 4) && i != 12 && i != 13 && i != 14 {
+			fmt.Println(i, "korovy")
+		} else {
+			fmt.Println(i, "korov")
+		}
+	}
+}
+
+func getSum(num int) int {
+	str := strconv.Itoa(num)
+	sum := 0
+	for _, v := range str {
+		val, _ := strconv.Atoi(string(v))
+		sum += val
+	}
+	return sum
 }
 
 func isUnique(number int) bool {

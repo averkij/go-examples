@@ -15,7 +15,7 @@ import (
 
 func main() {
 	intervalInSeconds := 3
-	amountOfNumbers := 50
+	amountOfNumbers := 52
 
 	seed := rand.NewSource(time.Now().UnixNano())
 	rnd := rand.New(seed)
