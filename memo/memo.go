@@ -14,7 +14,7 @@ import (
 //4. Recall the persons from the palace and translate them to numbers.
 
 func main() {
-	intervalInSeconds := 3
+	intervalInSeconds := 2
 	amountOfNumbers := 52
 
 	seed := rand.NewSource(time.Now().UnixNano())

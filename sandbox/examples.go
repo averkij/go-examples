@@ -196,6 +196,7 @@ func main() {
 	fmt.Println(getSum(strToSum))
 
 	//17
+	fmt.Println("\n---------------- 17 --------------")
 	for i := 0; i < 100; i++ {
 		if i%10 == 1 && i != 11 {
 			fmt.Println(i, "korova")
@@ -205,6 +206,38 @@ func main() {
 			fmt.Println(i, "korov")
 		}
 	}
+
+	//18
+	fmt.Println("\n---------------- 18 --------------")
+	a18 := 256
+	k18 := 1
+	for k18 <= a18 {
+		fmt.Print(k18, " ")
+		k18 = k18 << 1
+	}
+
+	fmt.Println("\n---------------- 19 --------------")
+	fiboLimit := 8
+
+	for i := range getFibos(fiboLimit) {
+		fmt.Println(i)
+	}
+}
+
+func getFibos(limit int) <-chan int {
+	ch := make(chan int)
+
+	go func() {
+		a, b := 0, 1
+		for a <= limit {
+			ch <- a
+			b = a + b
+			a = b - a
+		}
+		close(ch)
+	}()
+
+	return ch
 }
 
 func getSum(num int) int {
