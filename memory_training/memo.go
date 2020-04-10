@@ -198,7 +198,7 @@ func trainPalace(intervalInSeconds int, reverse, random, showTag, showNumber, on
 		23: "[КП ПРЦ] Приемники",
 		24: "[КП ПРЦ] Новый год",
 		25: "[КП] Телеграф",
-		26: "[КП] Кладовка ", //the half of the deck
+		26: "[КП] Кладовка", //the half of the deck
 		27: "[Часть] Вышка",
 		28: "[Часть] Релейка",
 		29: "[Часть] Окоп",
