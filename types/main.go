@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 )
 
 func main() {
@@ -20,4 +21,9 @@ func main() {
 	//2
 	typeName := fmt.Sprintf("%T", obj)
 	fmt.Println(typeName)
+
+	//3
+	typeRefl := reflect.TypeOf(obj)
+	valRefl := reflect.ValueOf(obj)
+	fmt.Println(typeRefl, valRefl)
 }
