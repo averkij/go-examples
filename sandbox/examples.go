@@ -222,6 +222,23 @@ func main() {
 	for i := range getFibos(fiboLimit) {
 		fmt.Println(i)
 	}
+
+	//20
+	num20 := 123
+	str20 := strconv.Itoa(num20)
+	fmt.Println("number of digits:", len(str20))
+
+	//21 pointer
+	v21 := 5
+	p21 := &v21
+	fmt.Print(*p21, " ")
+	changePointer(p21)
+	fmt.Print(*p21)
+}
+
+func changePointer(p *int) {
+	v := 3
+	p = &v
 }
 
 func getFibos(limit int) <-chan int {
